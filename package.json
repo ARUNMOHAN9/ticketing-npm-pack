@@ -1,15 +1,15 @@
 {
   "name": "@ticketsam/common",
-  "version": "1.0.3",
+  "version": "1.0.0",
   "description": "",
   "main": "./build/index.js",
   "types": "./build/index.ts",
   "files": [
-    "build/**/*"
+    "./build/**/*"
   ],
   "scripts": {
-    "clean": "del ./build/*",
-    "build": "tsc",
+    "clean": "del-cli ./build/*",
+    "build": "npm run clean && tsc",
     "pub": "git add . && git commit -m \"Updates\" && npm version patch && npm run build && npm publish"
   },
   "author": "",
